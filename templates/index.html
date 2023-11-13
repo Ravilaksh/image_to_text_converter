@@ -1,0 +1,97 @@
+{% extends "layout.html" %}
+{% block body %}
+
+  <!-- CSS  -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  
+  <link href="{{url_for('static',filename ='css/styles.css')}}" rel="stylesheet" />
+  
+  
+ <!-- Page Header-->
+        <header class="masthead" style="background-image : url('{{url_for('static',filename ='assets/img/img_back.jpg')}}')">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="site-heading">
+                            <h1>Image to Text Converter</h1>
+                            <span class="subheading"><b> A NLP Model by Lakshmanan Ravi </b></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Main Content-->
+        <div class="container px-4 px-lg-5" id="index-banner">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+              <div class="col-md-10 col-lg-8 col-xl-7">
+                <form action='/index' method="post" class="form-floating" enctype="multipart/form-data">
+                  <div class="row">
+        
+                    <div class="input-field col s5" style="margin-left: 20px; margin-top: 50px">
+                      <div class = "row">
+        
+                          <div class="row">
+                            <label for="first_name"><b>Upload Image</b></label><br>
+                            <hr>
+                            <div class = "file-field input-field">
+                              <div class = "row gx-4 gx-lg-5 justify-content-center" style="background-color: #0085A1">
+                                
+                                <input  class="btn btn-primary" type = "file" name="image_upload" id="image_upload" />
+                              </div>
+                              <!--<div class = "file-path-wrapper">
+                                <input class = "file-path validate" type = "text" placeholder = "Upload Image" name="image_name" id="image_name" />
+                              </div>-->
+                            </div>
+                          </div>
+        
+                          <div class="d-flex justify-content-end mb-4" style="margin-top: 50px">
+                            <button id="submit" type="submit" class="btn btn-primary" style="background-color: #0085A1">Extract</button>
+                          </div>
+        
+                          <div>
+                            {% if text %}
+                            <br>
+                            <h5>Extracted</h5>
+                            
+                            <p>{{ text }}</p>
+                            
+                            {% endif %}
+                          </div>
+        
+                      </div>
+                    </div>
+        
+                    <div class="row center">
+                      <div style="text-align: center; padding-top: 50px">
+                        <img src="{{ url_for('static',filename=full_filename) }}" style="max-width: 75%; height: auto;">
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        
+          </div>
+          </div>
+        </div>
+    </div>
+</div>
+
+            <!--  Scripts-->
+  <script src="./static/js/materialize.js"></script>
+  <script type="text/javascript">
+    var imagebox = document.getElementById('imagebox');
+    var textbox = document.getElementById('textboxes');
+
+    document.getElementById('image_upload').onchange = function () {
+        document.getElementById('image_name').value = this.value.slice(12,100);
+    };
+
+
+  </script>
+                    <!-- Pager
+                    <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#!">Older Posts →</a></div>-->
+        
+       
+        {% endblock %}

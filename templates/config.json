@@ -1,0 +1,25 @@
+{
+    "params":
+    {
+        "local_server":"True",
+        "local_uri":"mysql+pymysql://root:@localhost/image_to_text",
+        "prod_uri":"mysql+pymysql://root:@localhost/image_to_text",
+        "lin_url":"https://www.linkedin.com/in/lakshmanan-ravi/",
+        "twi_url":"https://twitter.com/LakshmananRavi1",
+        "user_email":"lakshmananravi9@gmail.com",
+        "user_password" : "gupezhkuqtzdbzqi",
+        "no_of_post":3,
+        "admin_name":"lakshmananravi9@gmail.com",
+        "admin_password": "24May1995@",
+        "uploads":"flask_learning/static/uploads",
+        "DEBUG": "false",
+        "TESTING": "false",
+        "SECRET_KEY": "lakshmanan",
+        "UPLOADS": "C:/Users/laksh/Desktop/flask_learning/static/uploads/",
+        "IMAGE": "C:/Users/laksh/Desktop/flask_learning/static/images/white_bg.jpg",
+        "SESSION_COOKIE_SECURE": "true",
+        "DEFAULT_THEME": null
+        
+
+    }
+}
