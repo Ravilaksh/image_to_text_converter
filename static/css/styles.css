@@ -548,6 +548,17 @@ progress {
   height: 175px;
 }
 
+.custom-margin {
+  margin-right: 61%;
+  /* Adjust the default margin percentage as needed */
+
+  /* Responsive margin for small screens */
+  @media (max-width: 767px) {
+    margin-right: 0;
+    margin-left: auto;
+  }
+}
+
 .rounded-image-container {
   overflow: hidden;
   border-radius: 50%;

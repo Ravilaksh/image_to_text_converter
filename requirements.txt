@@ -1,0 +1,8 @@
+flask 
+flask_sqlalchemy 
+flask_mail 
+datetime
+opencv-python
+numpy
+pytesseract
+Pillow

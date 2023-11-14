@@ -12,6 +12,7 @@ from PIL import Image
 import random
 import string
 import pytesseract
+import math
 
 
 local_server = True
@@ -194,7 +195,7 @@ def contact():
 
 @app.route("/post")
 def post():
-    posts = Posts.query.filter_by().all()
+    posts = Posts.query.filter_by().all()[0 : params["no_of_posts"]]
     return render_template("post.html", params=params, posts=posts)
 
 
